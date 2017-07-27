@@ -1,0 +1,7 @@
+@import "variables";
+
+@each $name, $colors in $colors-set {
+    .btn-#{$name} {
+        @include button-variant(nth($colors, 2), nth($colors, 1), nth($colors, 3));
+    }
+}

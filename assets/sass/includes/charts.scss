@@ -1,0 +1,25 @@
+.chartbox {
+    position: relative;
+    background-color: $color-white;
+    border-right: 1px solid $color-dark-lighter;
+
+    &:last-child {
+        border-right: 0;
+
+    }
+
+    .chartbox-header {
+        border-bottom: 1px solid $color-dark-lighter;
+        border-top: 1px solid $color-dark-lighter;
+        padding: 15px;
+
+        h1, h2, h3, h4, h5, h6,
+        .h1, .h2, .h3, .h4, .h5, .h6 {
+            font-weight: 600;
+        }
+    }
+}
+
+.chart-donut {
+    height: 150px;
+}

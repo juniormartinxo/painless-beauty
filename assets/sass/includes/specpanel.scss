@@ -1,0 +1,66 @@
+@import "../vendor/bootstrap/scss/variables";
+@import "../vendor/bootstrap/scss/mixins";
+@import "variables";
+@import "placeholders";
+
+.specpanel {
+    @extend %shadowRightBottom;
+    display: flex;
+    flex-direction: row;
+    -webkit-align-items: center;
+    justify-content: center;
+    padding: 35px 0;
+    position: relative;
+    border-radius: 5px;
+    margin-right: 20px;
+    background: #ffffff;
+    height: 120px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    p {
+        white-space: nowrap;
+
+        span {
+            font-size: 24px;
+        }
+    }
+
+    i.specpanel-icon {
+        font-size: 32px;
+        margin-right: 10px;
+        padding-right: 10px;
+    }
+
+    .btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-left: -10px;
+        font-size: 10px !important;
+
+        i {
+            font-size: 16px !important;
+        }
+    }
+
+    @each $name, $colors in $colors-set {
+        &.specpanel-#{$name} {
+            i.specpanel-icon {
+                color: nth($colors, 1);
+                border-right: 1px solid lighten(nth($colors, 1), 25%);
+            }
+
+            p {
+                color: nth($colors, 1);
+            }
+
+            .btn {
+                @include button-variant(nth($colors, 2), nth($colors, 1), nth($colors, 3));
+                @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+            }
+        }
+    }
+}

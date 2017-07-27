@@ -1,0 +1,76 @@
+@import "variables";
+@import "mixins";
+@import "placeholders";
+
+#access-container {
+    @extend %backgroundLoginLock;
+
+    #access-container-form {
+        @include positionAbsolute(15%, 350px);
+        display: grid;
+        padding: 12px;
+        -webkit-box-shadow: 0 0 17px -7px rgba(0, 0, 0, 0.65);
+        -moz-box-shadow: 0 0 17px -7px rgba(0, 0, 0, 0.65);
+        box-shadow: 0 0 17px -7px rgba(0, 0, 0, 0.65);
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+
+        #access-container-form-header {
+            background-color: $brand-primary;
+            position: relative;
+
+            .form-logo {
+                @extend %logo-registers-form;
+            }
+
+            img {
+                width: 80px;
+                position: absolute;
+                left: 50%;
+                margin-left: -40px;
+                margin-top: -40px;
+            }
+
+            p{
+                text-align: center;
+                color: #fff;
+                margin-top: 50px;
+                margin-bottom: 10px;
+            }
+
+            span.arrow-down {
+                @include css-triangle($brand-primary, down, 20px);
+                left: 45px;
+                margin-top: -10px;
+            }
+        }
+
+        #access-container-form-body {
+            padding: 15px;
+            background-color: #fff;
+
+            .field {
+                margin-bottom: 20px;
+
+                &:first-child {
+                    margin-top: 25px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            input {
+                @extend %resetInput;
+                border-bottom: 1px solid #dedede;
+                font-size: 17px;
+
+                &:focus {
+                    border-bottom: 1px solid $brand-primary;
+                }
+            }
+        }
+    }
+}

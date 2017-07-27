@@ -1,0 +1,71 @@
+@import "variables";
+@import "mixins";
+
+%mediaGridDefault {
+    display: grid;
+
+    @media screen and (min-width: 750px) {
+        width: 100%;
+        grid-template-columns: 250px 1fr;
+    }
+}
+
+%shadowBottom {
+    webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+%shadowRightBottom {
+    -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.07);
+    -moz-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.07);
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.07);
+}
+
+%shadowRight {
+    -webkit-box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.09);
+    -moz-box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.09);
+    box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.09);
+    z-index: 1;
+}
+
+%resetInput {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    border: 0;
+}
+
+%backgroundLoginLock {
+    background: #D1EAFE url("../public/img/bkgs/bkg_login.jpg") no-repeat top center;
+    display: grid;
+    grid-template-rows: 100vh;
+    grid-template-columns: 40px 50px auto 50px 40px;
+    position: relative;
+}
+
+%logo-registers-form {
+    @include css-circle(90px, transparent, 60px);
+    position: absolute;
+    left: 50%;
+    margin-left: -45px;
+    margin-top: -45px;
+
+    span {
+        @include css-circle(80px, #fff, 60px);
+        position: absolute;
+        left: 50%;
+        margin-left: -40px;
+        margin-top: 5px;
+    }
+
+    i {
+        position: absolute;
+        font-size: 40px;
+        color: $brand-primary;
+        left: 50%;
+        margin-left: -12px;
+        margin-top: 20px;
+    }
+}

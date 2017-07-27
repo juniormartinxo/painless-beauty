@@ -1,0 +1,171 @@
+@import "mixins";
+@import "placeholders";
+@import "variables";
+
+body {
+    font-family: $text-font-family;
+    background-color: $background-main-color;
+}
+
+#grid-admin {
+    display: grid;
+    grid-template-rows: 15vh;
+
+    @media screen and (min-width: 750px) {
+        grid-template-rows: 6vh 94vh;
+    }
+
+    #main-header {
+        @extend %mediaGridDefault;
+
+        #main-header-nav {
+            @extend %shadowBottom;
+            background-color: $color-primary;
+            z-index: 2;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+
+            h1.title {
+                color: $color-white;
+                font-size: $font-size-title-6;
+            }
+
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                align-content: flex-end;
+
+                li {
+                    a {
+                        padding: 5px 5px;
+                        background-color: #3A8BFE;
+                        margin-left: 2px;
+                        border-radius: 2px 2px 2px 2px;
+                        -moz-border-radius: 2px 2px 2px 2px;
+                        -webkit-border-radius: 2px 2px 2px 2px;
+                        font-size: 14px;
+
+                        i {
+                            color: #ffffff;
+                        }
+
+                        &:hover {
+                            background-color: #0053af;
+                        }
+                    }
+                }
+            }
+        }
+
+        #main-header-section {
+            @extend %shadowBottom;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            //justify-content: space-around;
+            padding: 0 30px;
+            z-index: 2;
+        }
+    }
+
+    #main-content {
+        @extend %mediaGridDefault;
+
+        #main-content-nav {
+            @extend %shadowRight;
+            background-color: $color-white;
+            display: none;
+
+            @media screen and (min-width: 750px) {
+                display: block;
+            }
+
+            ul {
+                li {
+                    font-size: $font-size-nav;
+                    border-bottom: 1px solid $border-color;
+
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+
+                    &.user-info {
+                        height: 200px;
+                        position: relative;
+
+                        span {
+                            background-color: $color-primary;
+                            height: 75px;
+                            display: block;
+                        }
+
+                        img {
+                            width: 130px;
+                            position: absolute;
+                            top: 15px;
+                            left: 50%;
+                            margin-left: -65px;
+                        }
+
+                        p {
+                            position: absolute;
+                            bottom: 15px;
+                            text-align: center;
+                            width: 100%;
+                            line-height: 18px;
+                        }
+                    }
+
+                    &.nav-title {
+                        color: $nav-title-color;
+                        padding: 10px 15px;
+                        margin-top: 10px;
+                    }
+
+                    a {
+                        display: flex;
+                        color: $color-primary;
+                        font-size: $font-size-nav;
+
+                        .nav-text {
+                            padding: 10px 15px;
+                            border-left: 1px solid $border-color;
+                        }
+
+                        &:hover, &.selected {
+                            color: $nav-title-color;
+                            background-color: #fafafa;
+
+                            i, .nav-text {
+                                color: $nav-title-color;
+                            }
+                        }
+
+                        i {
+                            padding: 10px 15px;
+                            margin: 0 15px 0 0;
+                            font-size: 17px;
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #main-content-section {
+            background-color: $background-main-color;
+            padding: 8px 0;
+        }
+    }
+}
+
+.section {
+    @extend %shadowRightBottom;
+    margin-bottom: 10px;
+    background: #ffffff;
+    padding: 15px;
+}

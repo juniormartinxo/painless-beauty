@@ -1,0 +1,30 @@
+@import "variables";
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $texts-color;
+    font-size: $font-size-all;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: $texts-color;
+    font-size: $font-size-all;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+    color: $texts-color;
+    font-size: $font-size-all;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: $texts-color;
+    font-size: $font-size-all;
+}
+/*
+::-moz-selection {
+    background: yellow;
+}
+
+::selection {
+    background: yellow;
+}
+*/

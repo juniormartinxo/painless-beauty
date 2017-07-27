@@ -1,0 +1,82 @@
+@import "../vendor/bootstrap/scss/mixins";
+@import "variables";
+@import "placeholders";
+
+.box {
+    @extend %shadowRightBottom;
+    position: relative;
+    background-color: $color-white;
+    border-radius: 5px;
+    display: block;
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    &.box-single {
+        margin-bottom: 0 !important;
+    }
+
+    .box-header {
+        border-bottom: 1px solid $color-dark-lighter;
+        padding: 15px;
+
+        h1, h2, h3, h4, h5, h6,
+        .h1, .h2, .h3, .h4, .h5, .h6 {
+            font-weight: 600;
+        }
+    }
+
+    .box-body {
+        padding: 15px;
+    }
+
+    .box-footer {
+        border-top: 1px solid $color-dark-lighter;
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 15px;
+
+        .btn{
+            @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+        }
+    }
+
+    @each $name, $colors in $colors-set {
+        .box-header-#{$name} {
+            color: nth($colors, 2) !important;
+            background-color: nth($colors, 1) !important;
+            border-bottom: 1px solid nth($colors, 3) !important;
+
+            h1, h2, h3, h4, h5, h6,
+            .h1, .h2, .h3, .h4, .h5, .h6 {
+                color: nth($colors, 2) !important;
+            }
+        }
+
+        .box-footer-#{$name} {
+            color: nth($colors, 2) !important;
+            background-color: nth($colors, 1) !important;
+            border-top: 1px solid nth($colors, 3) !important;
+        }
+
+        &.box-#{$name} {
+            color: nth($colors, 2) !important;
+            background-color: nth($colors, 1) !important;
+            border: 1px solid nth($colors, 3) !important;
+
+            .box-header {
+                border-bottom: 1px solid nth($colors, 3) !important;
+            }
+
+            h1, h2, h3, h4, h5, h6,
+            .h1, .h2, .h3, .h4, .h5, .h6 {
+                color: nth($colors, 2) !important;
+            }
+        }
+    }
+}

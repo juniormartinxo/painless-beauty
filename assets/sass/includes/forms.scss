@@ -1,0 +1,15 @@
+@import "variables";
+
+.input:focus, .input.is-focused, .input:active, .input.is-active,
+.textarea:focus,
+.textarea.is-focused,
+.textarea:active,
+.textarea.is-active {
+    border-color: $colorSelected;
+}
+
+.label, .input, .textarea {
+    font-family: 'Oxygen', 'Roboto Condensed', sans-serif !important;
+    color: $colorText;
+    font-weight: 400;
+}

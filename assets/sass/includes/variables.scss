@@ -1,0 +1,59 @@
+/* FONTES */
+//Families
+$text-font-family: 'Source Sans Pro', sans-serif;
+$titles-font-family: 'Source Sans Pro', sans-serif;
+
+// Sizes
+$font-size-all: 0.85rem;
+$font-size-nav: 0.70rem;
+
+$font-size-title-1: 2.25rem !default;
+$font-size-title-2: 2.0rem !default;
+$font-size-title-3: 1.75rem !default;
+$font-size-title-4: 1.50rem !default;
+$font-size-title-5: 1.25rem !default;
+$font-size-title-6: 0.85rem !default;
+
+/* CORES */
+$color-white: #ffffff;
+$color-dark-shadow: #2B2F2E !default;
+$color-dark: #464a4c !default;
+$color-dark-light: #636c72 !default;
+$color-dark-lighter: #eceeef !default;
+$color-dark-lightest: #f7f7f9 !default;
+$color-deep: #607d8b;
+$color-primary: #0065ff !default;
+$color-primary-light: #3384ff !default;
+$color-happy: #ff5230 !default;
+$color-happy-light: #ff674a !default;
+$color-success: #00cd7a !default;
+$color-info: #00bacd !default;
+$color-warning: #ffb51b !default;
+$color-danger: #ff4249 !default;
+$color-beauty: #ff5b77 !default;
+$color-spirit: #613d7c !default;
+
+$colors-set: (
+        'dark-shadow':$color-dark-shadow #e8eaea darken($color-dark-shadow, 5%),
+        'dark':$color-dark #e8eaea darken($color-dark, 5%),
+        'dark-light':$color-dark-light #e8eaea darken($color-dark-light, 5%),
+        'dark-lighter':$color-dark-lighter #636c72 darken($color-dark-lighter, 5%),
+        'dark-lightest':$color-dark-lightest #636c72 darken($color-dark-lightest, 5%),
+        'deep':$color-deep #e8eaea darken($color-deep, 5%),
+        'primary': $color-primary #ffffff darken($color-primary, 5%),
+        'primary-light': $color-primary-light #ffffff darken($color-primary-light, 5%),
+        'happy': $color-happy #ffffff darken($color-happy, 5%),
+        'happy-light': $color-happy-light #ffffff darken($color-happy-light, 5%),
+        'success': $color-success #ffffff darken($color-success, 5%),
+        'info': $color-info #ffffff darken($color-info, 5%),
+        'warning': $color-warning #ffffff darken($color-warning, 5%),
+        'danger': $color-danger #ffffff darken($color-danger, 5%),
+        'beauty': $color-beauty #ffffff darken($color-beauty, 5%),
+        'spirit': $color-spirit #ffffff darken($color-spirit, 5%)
+);
+
+$titles-color: $color-dark;
+$texts-color: $color-dark-light;
+$background-main-color: $color-dark-lightest;
+$nav-title-color: $color-happy;
+$border-color: $color-dark-lighter;
