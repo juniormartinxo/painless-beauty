@@ -26,7 +26,11 @@
     "type": "git",
     "url": "git+https://github.com/junioraluisio/painless-beauty.git"
   },
-  "author": "Aluisio Martins Junior",
+  "author":
+    {
+      "name": "Junior Martins",
+      "email": "amjr.box@gmail.com"
+    },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/junioraluisio/painless-beauty/issues"
